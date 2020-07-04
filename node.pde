@@ -20,8 +20,8 @@ class Node {
     ellipse(x, y, 2*radius, 2*radius); /* draw ellipse */
   }
 
-  /* move node */
-  void move() {
+  /* update node */
+  void update() {
     /* move */
     x += velocity_x;
     y += velocity_y;

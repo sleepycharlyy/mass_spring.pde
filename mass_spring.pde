@@ -1,6 +1,6 @@
 /* global variables */
 ArrayList<Node> nodes = new ArrayList<Node>();
-
+ArrayList<Spring> springs = new ArrayList<Spring>();
 
 /* setup function runs at start once */
 void setup() {
@@ -12,10 +12,16 @@ void setup() {
 void draw() {
   background(255); /* set background color white */
   
-  /* draw and move all nodes */
+  /* draw and update all nodes */
   for(int i = 0; i < nodes.size(); i++) {
     nodes.get(i).display();
-    nodes.get(i).move();
+    nodes.get(i).update();
+  }
+  
+   /* draw and update all springs */
+  for(int i = 0; i < springs.size(); i++) {
+    springs.get(i).display();
+    springs.get(i).update();
   }
   
   /* check collision on all nodes with all other nodes */
