@@ -1,3 +1,2 @@
 # mass_spring
-remake of terry davis' MassSpring.HC game in processing 3.
-
+Remake of Terry Davis' MassSpring.HC game in Processing 3
