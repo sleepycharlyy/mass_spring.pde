@@ -1,4 +1,4 @@
-# Mass Spring Remake
+# Mass Spring Clone
 Remake of Terry Davis' MassSpring.HC game in Processing 3
 
 # Controls:
