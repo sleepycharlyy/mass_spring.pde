@@ -7,7 +7,7 @@ class Node {
   Node(float x_, float y_) {
     x = x_;
     y = y_;
-    radius = random(2.5, 16);
+    radius = random(4, 16);
     velocity_x = random(-0.05, 0.05); 
     velocity_y = random(-0.05, 0.05); 
     mass = radius/50; /* mass is proportional to radius */

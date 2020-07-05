@@ -2,6 +2,9 @@
 ArrayList<Node> nodes = new ArrayList<Node>();
 ArrayList<Spring> springs = new ArrayList<Spring>();
 
+boolean spring_create_dragging = false; /* currently dragging */
+Node spring_create_n1 = null;
+
 /* setup function runs at start once */
 void setup() {
   /* window size */
@@ -36,16 +39,66 @@ void draw() {
 
 /* mouse press event */
 void mousePressed() {
+  /* create nodes and remove nodes */
   if (mouseButton == LEFT) {
     float x = mouseX;
     float y = mouseY;
     Node hovering_over = node_find(x, y);
     
+    /* check if hovering over a node when yes delete node when no create new node */
     if (hovering_over == null) { 
       nodes.add(new Node(x, y));  /* create new node */
     } else {
+      // check if node is in a spring
+      for(int i = 0; i < springs.size(); i++) {
+            Node n1_ = springs.get(i).n1;
+            Node n2_ = springs.get(i).n2;
+            if (n1_ == hovering_over || n2_ == hovering_over) springs.remove(i);
+      }
       nodes.remove(hovering_over);
     }
+  /* drag to create springs */
+  } else if (mouseButton == RIGHT){
+    Node n1 = node_find(mouseX, mouseY);
+    if (n1 != null) { /* if pressing on a node */
+      /* set variables for dragging true if started dragging on a node and save the node you started on in a variable */
+      spring_create_dragging = true;
+      spring_create_n1 = n1;
+    }
+  }
+}
+
+/* mouse released event */
+void mouseReleased() {
+  /* drag to create springs */
+  if (mouseButton == RIGHT) {
+    if (spring_create_dragging == true) {
+      Node n2 = node_find(mouseX, mouseY);
+      if (n2 != null) { /* if releasing on a node */
+        if (n2 != spring_create_n1) { /* check if n2 is not the same as n1 */
+          /* check if spring already exists */
+          boolean already_exists = false;
+          for(int i = 0; i < springs.size(); i++) {
+            Node n1_ = springs.get(i).n1;
+            Node n2_ = springs.get(i).n2;
+            if(n1_ == spring_create_n1 && n2_ == n2) already_exists = true;
+            if(n2_ == spring_create_n1 && n1_ == n2) already_exists = true;
+          }
+          /* finally create spring */
+          if (!already_exists)  springs.add(new Spring(spring_create_n1, n2)); 
+        }
+      }
+    spring_create_dragging = false;  /* set variable back to false */
+    }
+  }
+}
+
+/* keyboard pressed event */
+void keyPressed() {
+  /* reset screen */
+  if (key == 'R' || key == 'r') {
+    springs.clear();
+    nodes.clear();
   }
 }
 
