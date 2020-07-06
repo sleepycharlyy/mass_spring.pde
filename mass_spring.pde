@@ -14,7 +14,7 @@ void setup() {
 /* draw function (runs every frame) */
 void draw() {
   background(255); /* set background color white */
-  
+
   /* draw and update all nodes */
   for(int i = 0; i < nodes.size(); i++) {
     nodes.get(i).display();

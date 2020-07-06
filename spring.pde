@@ -6,19 +6,17 @@ class Spring {
   Node n1;
   Node n2;
   float position, velocity, acceleration, force;
-
   
    /* constructor */
   Spring(Node n1_, Node n2_) {
     /* constants */
-    spring_constant = 0.2; 
+    spring_constant = 2; 
     damping = 0.92;
-    rest_position = 10;
-    mass = 0.8;
+    rest_position = 15;
+    mass = 20;
     
     /* simulation variables */
-    /* TODO: make the equation down there work, theres a bug where nodes and spring disappear sometimes */
-    if ((n1_.y > n2_.y) || (n1_.x > n2_.x)) {
+    if ((n1_.y >= n2_.y) || (n1_.x >= n2_.x)) {
       n1 = n2_;
       n2 = n1_;
     } else {
@@ -43,7 +41,7 @@ class Spring {
     force = -spring_constant * (position - rest_position);      /* force = -ky */
     acceleration = force / mass;                                /* set the acceleration f=ma == a=f/m */
     velocity = damping * (velocity + acceleration);             /* set the velocity */
-    position = (sqrt((n2.x - n1.x)*2 + (n2.y - n1.y)*2));    /* set position to distance between the two nodes */
+    position = (sqrt(abs((n2.x - n1.x)*2 + (n2.y - n1.y)*2)));    /* set position to distance between the two nodes */
     
     /* update position */
     if (position >= 0){
@@ -51,14 +49,15 @@ class Spring {
     } else {
       position = position - velocity;
     }
+    
     /* make adjust nodes to position via position variables after adding velocity */
     n1.x = -((pow(position, 2) - (2 * n2.x) - (2 * n2.y) + (2 * n1.y))/2);
     n1.y = -((pow(position, 2) - (2 * n2.x) + (2 * n1.x) - (2 * n2.y))/2);
     n2.x = ((pow(position, 2) + (2 * n1.x) - (2 * n2.y) + (2 * n1.y))/2);
     n2.y = ((pow(position, 2) - (2 * n2.x) + (2 * n1.x) + (2 * n1.y))/2);
-    
+
     /* set velocity to 0 when its below 0.1 */
-    if(abs(velocity) < 0.1) { 
+    if(abs(velocity) < 0.05) { 
       velocity = 0.0;
     }
     

@@ -10,7 +10,7 @@ class Node {
     radius = random(4, 16);
     velocity_x = random(-0.07, 0.07); 
     velocity_y = random(-0.07, 0.07); 
-    mass = radius/50; /* mass is proportional to radius */
+    mass = 4; 
     friction = 0.04;
   }
 
