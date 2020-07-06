@@ -1,16 +1,15 @@
 class Node {
   /* initalize variables */
-  float x, y, radius;
-  float velocity_x, velocity_y, mass, friction; 
+  float x, y, radius, velocity_x, velocity_y, mass, friction; 
 
   /* constructor */
   Node(float x_, float y_) {
     x = x_;
     y = y_;
-    radius = random(4, 16);
     velocity_x = random(-0.07, 0.07); 
     velocity_y = random(-0.07, 0.07); 
-    mass = 4; 
+    mass = random(2, 4); 
+    radius = mass*4;
     friction = 0.04;
   }
 
@@ -26,7 +25,7 @@ class Node {
     x += velocity_x;
     y += velocity_y;
     
-    /* screen border collission */
+    /* screen border collission 
     if (x > width - radius) {
       x = width - radius;
       velocity_x = -velocity_x;
@@ -42,7 +41,7 @@ class Node {
     if (y < radius) {
       y = radius;
       velocity_y = -velocity_y;
-    }
+    }*/
     
     /* calculate friction */
     velocity_x = lerp(velocity_x, 0, friction);  
