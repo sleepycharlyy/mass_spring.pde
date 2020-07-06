@@ -13,3 +13,7 @@ a remake of Terry Davis' MassSpring.HC game in Processing 3
 # Screenshots:
 
 ![alt text](https://i.imgur.com/a4NlQE2.png)
+
+# TO:DO
+
+- Add UI to control and customize variables
