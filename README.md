@@ -1,6 +1,7 @@
-# Mass Spring Clone
+# Mass Spring Physics Simulation
 
-a remake of Terry Davis' MassSpring.HC game in Processing 3
+a remake of Terry Davis' MassSpring.HC game in Processing 3.
+Simulates how springs interact with mass.
 
 - You need Java 8 to run this program
 
@@ -14,6 +15,6 @@ a remake of Terry Davis' MassSpring.HC game in Processing 3
 
 ![alt text](https://i.imgur.com/a4NlQE2.png)
 
-# TO:DO
+# TO:DO:
 
 - Add UI to control and customize variables
