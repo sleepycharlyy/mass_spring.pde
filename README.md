@@ -1,7 +1,6 @@
 # Mass Spring Physics Simulation
 
-a remake of Terry Davis' MassSpring.HC game in Processing 3.
-Simulates how springs interact with mass.
+a remake of Terry Davis' MassSpring.HC game in Processing 3\. Simulates how springs interact with mass.
 
 - You need Java 8 to run this program
 
@@ -17,4 +16,5 @@ Simulates how springs interact with mass.
 
 # TO:DO:
 
+- Add Config File to customize variables
 - Add UI to control and customize variables
