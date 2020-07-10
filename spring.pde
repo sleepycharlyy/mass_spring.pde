@@ -51,6 +51,10 @@ class Spring {
     }
     
     /* make adjust nodes to position via position variables after adding velocity */
+    /* NOTE: probably a problem is that the coordinate system of processing starts 
+     * from the top left corner and not the bottom left corner so idk if this affects this 
+     * and my brain can't wrap around too many numbers but it seems like this could impact 
+     * the accuracy of the results of these calculations... */
     n1.x = -((pow(position, 2) - (2 * n2.x) - (2 * n2.y) + (2 * n1.y))/2);
     n1.y = -((pow(position, 2) - (2 * n2.x) + (2 * n1.x) - (2 * n2.y))/2);
     n2.x = ((pow(position, 2) + (2 * n1.x) - (2 * n2.y) + (2 * n1.y))/2);
@@ -60,9 +64,5 @@ class Spring {
     if(abs(velocity) < 0.05) { 
       velocity = 0.0;
     }
-    
-    
-    
-    
   }
 }
