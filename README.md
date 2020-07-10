@@ -2,7 +2,7 @@
 
 ## About
 
-a remake of Terry Davis' MassSpring.HC game in Processing 3\. Simulates how springs interact with mass.
+a remake of Terry Davis' MassSpring.HC game in Processing 3. Simulates how springs interact with mass.
 
 - You need Java 8 to run this program
 
