@@ -4,7 +4,7 @@
 
 a remake of Terry Davis' MassSpring.HC game in Processing 3. Simulates how springs interact with mass.
 
-- You need Java 8 to run this program
+- You need Java to run this program
 
 ## Controls
 
