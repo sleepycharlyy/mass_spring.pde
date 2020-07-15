@@ -2,7 +2,8 @@
 
 ## About
 
-a remake of Terry Davis' MassSpring.HC game in Processing 3. Simulates how springs interact with mass.
+a remake of Terry Davis' MassSpring.HC game in Processing 3.  
+Simulates how springs interact with mass.  
 [itch.io page](https://sleepycharlyy.itch.io/mass-spring)  
 
 - You need Java to run this program
