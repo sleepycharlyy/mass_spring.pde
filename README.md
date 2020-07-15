@@ -16,7 +16,3 @@ a remake of Terry Davis' MassSpring.HC game in Processing 3. Simulates how sprin
 
 ![alt text](https://i.imgur.com/a4NlQE2.png)
 
-## TO:DO
-
-- [ ] Add Config File to customize variables
-- [ ] Add UI to control and customize variables
