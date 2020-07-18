@@ -1,5 +1,7 @@
 # Mass Spring Physics Simulation
 
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y11Y0ET)
+
 ## About
 
 a remake of Terry Davis' MassSpring.HC game in Processing 3.  
@@ -17,7 +19,3 @@ Simulates how springs interact with mass.
 ## Screenshots
 
 ![alt text](https://i.imgur.com/a4NlQE2.png)
-
-## Support me
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y11Y0ET)
