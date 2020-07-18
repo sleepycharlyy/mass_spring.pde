@@ -18,3 +18,6 @@ Simulates how springs interact with mass.
 
 ![alt text](https://i.imgur.com/a4NlQE2.png)
 
+## Support me
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y11Y0ET)
